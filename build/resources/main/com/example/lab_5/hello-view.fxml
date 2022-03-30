@@ -1,15 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="285.0" prefWidth="493.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab_5.HelloController">
+<VBox alignment="CENTER" prefHeight="452.0" prefWidth="495.0" spacing="20.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab_5.Controller">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-   <TableView fx:id="tableView" prefHeight="183.0" prefWidth="479.0">
+   <MenuBar prefHeight="68.0" prefWidth="474.0">
+     <menus>
+       <Menu mnemonicParsing="false" text="File">
+         <items>
+           <MenuItem mnemonicParsing="false" onAction="#menuNew" text="New" />
+               <MenuItem mnemonicParsing="false" onAction="#menuOpen" text="Open" />
+               <MenuItem mnemonicParsing="false" onAction="#menuSave" text="Save" />
+               <MenuItem mnemonicParsing="false" onAction="#menuSaveAs" text="SaveAs" />
+               <MenuItem mnemonicParsing="false" onAction="#menuExit" text="Exit" />
+         </items>
+       </Menu>
+     </menus>
+   </MenuBar>
+   <TableView fx:id="tableView" prefHeight="351.0" prefWidth="482.0">
      <columns>
        <TableColumn fx:id="StudentId" prefWidth="75.0" text="SID" />
        <TableColumn fx:id="Assignments" prefWidth="75.0" text="Assignments" />
@@ -19,4 +37,9 @@
          <TableColumn fx:id="Letter" prefWidth="75.0" text="Letter Grade" />
      </columns>
    </TableView>
+   <TextField fx:id="txt1" prefHeight="26.0" prefWidth="298.0" />
+   <TextField fx:id="txt2" />
+   <TextField fx:id="txt3" />
+   <TextField fx:id="txt4" />
+   <Button mnemonicParsing="false" onAction="#btnAdd" text="Add" />
 </VBox>
